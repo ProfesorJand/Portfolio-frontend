@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 10px auto;
+    padding: 20px 20px;
+    width: 80%;
+    background-color: #1e252f;
+    border: 0.5rem solid black;
+    border-radius: 2rem;
+    
+}
+
+.containerLeft{
+    width: 70%;
+    padding-right: 20px;
+    text-align: justify;
+    align-self: center;
+    line-height: 2rem;
+    color:white;
+}
+
+.containerRight{
+    display: block;
+    width: 25%;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+.image{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 160%;
+    object-fit: cover;
+        
+}
+
+.image-cropped-transform {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 160%;
+    object-fit: cover;
+}
