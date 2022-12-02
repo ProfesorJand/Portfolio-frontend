@@ -1,3 +1,5 @@
+html { scroll-behavior: smooth; }
+
 a{
   color:#ffffff;
 }
@@ -28,8 +30,24 @@ p{
   position: relative;
   flex-direction: column;
   width: 85%;
-  background-color: #282c34;
+  /* background-color: #282c34; */
   flex: 10;
+  background: linear-gradient(-45deg, #ee7752, #761f40, #0b2e3b, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 .containerApp-Left{
@@ -42,6 +60,7 @@ p{
   background-color: #111;
   flex: 1;
 }
+
 
 
 /* @keyframes App-logo-spin {

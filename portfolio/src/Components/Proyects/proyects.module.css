@@ -1,4 +1,47 @@
-.containerProyects{
+.containerProyects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 10px auto;
+  padding: 20px 20px;
+  background-color: #1e252f;
+  border: 0.5rem solid black;
+  border-radius: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 10px auto;
+  padding: 20px 20px;
+  width: 100%;
+  background-color: #293545;
+  border: 0.2rem solid black;
+  border-radius: 2rem;
+  word-break: break-word;
+  transition: 350ms;
+  color: white;
+}
+
+.container:hover {
+  background-color: #61dafb;
+  border: 0.2rem solid white;
+  cursor: pointer;
+}
+
+.container:hover p,
+.container:hover h2,
+.container:hover a {
+  color: black;
+  text-decoration-color: rgb(0, 0, 0);
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .containerProyects {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -8,52 +51,41 @@
     background-color: #1e252f;
     border: 0.5rem solid black;
     border-radius: 2rem;
-}
+  }
 
-.container{
+  .container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     position: relative;
     margin: 10px auto;
     padding: 20px 20px;
-    width: 25%;
+    width: 100%;
     background-color: #293545;
-    border: 0.5rem solid black;
+    border: 0.2rem solid black;
     border-radius: 2rem;
     word-break: break-word;
-    
+    transition: 350ms;
+    color: white;
+  }
 }
 
-.containerLeft{
-    width: 70%;
-    padding-right: 20px;
-    text-align: justify;
-    align-self: center;
-    line-height: 2rem;
-    color:white;
-}
-
-.containerRight{
-    display: block;
-    width: 25%;
-    overflow: hidden;
-    border-radius: 2rem;
-}
-
-.image{
-    position: relative;
-    top: 0;
+@media (min-width: 1025px) and (max-width:1385px) {
+  .containerProyects {
+    width: 50vw;
+  }
+  .container {
     width: 100%;
-    height: 160%;
-    object-fit: cover;
-        
+  }
 }
 
-.image-cropped-transform {
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 160%;
-    object-fit: cover;
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1386px) {
+  .containerProyects {
+    width: 50vw;
+  }
+  .container {
+    min-width: 300px;
+    max-width: 300px;
+  }
 }

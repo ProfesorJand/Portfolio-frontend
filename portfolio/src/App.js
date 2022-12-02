@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+//import logo from "./logo.svg";
 import Navbar from "./Components/Navbar/Navbar";
 import "./App.css";
 import Home from "./Components/Home/Home";
@@ -6,10 +6,6 @@ import Home from "./Components/Home/Home";
 function App() {
   return (
     <>
-      <div className="containerApp-Header">
-        hola
-        <img src="asdasd"></img>
-      </div>
       <div className="containerApp">
         <div className="containerApp-Left">
           <Navbar />

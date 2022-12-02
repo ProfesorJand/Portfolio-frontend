@@ -16,7 +16,7 @@
 }
 
 .DivTextarea{
-    width: 100%;
+
     min-height: 5rem;
     background-color: #293545;
     color: white;
@@ -28,7 +28,7 @@
 }
 
 .textarea{
-    width: 90%;
+    width: -webkit-fill-available;
     background-color: #293545;
     color: white;
     text-align: justify;
@@ -87,6 +87,31 @@ textarea::-webkit-scrollbar-thumb {
     margin-bottom: 1rem;
 }
 
+.submit:hover{
+    cursor:pointer;
+    background-color: var(--colorHover);
+    color: black;
+    font-weight: 800;
+}
+
 .divSended{
     margin:10px auto;
+}
+
+@media (max-width:767px){
+    .inputEmail{
+        width: 100%;
+    }
+    .inputSubject{
+        width: 100%;
+    }
+    .submit{
+        width: 100%;
+    }
+}
+
+@media (min-width:1025px){
+    .container{
+        width: 50vw;
+    }
 }
