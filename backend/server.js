@@ -35,7 +35,7 @@ app.post("/sendEmail", async (req,res)=>{
         await sendEmail(subject, message, send_to, sent_from, reply_to);
         res.status(200).json({success: true, message: "Email Sent"});
     } catch (error) {
-        res.status(200).json(error.message)
+        res.status(200).json({success: false, message: error.message})
         
     }
 
