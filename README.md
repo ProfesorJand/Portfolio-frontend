@@ -12,6 +12,6 @@ Step 1:
 
 Step 2:
 
-Author: Jorge Andrade "Profesorjand"
+Author: Jorge Andrade "ProfesorJand"
 
 Github: https://github.com/ProfesorJand/
