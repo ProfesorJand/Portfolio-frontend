@@ -34,24 +34,30 @@ export default function Contact() {
 
   async function formHandle(e) {
     e.preventDefault();
-    if (!email) {
-      alert("Email Missing");
-    } else if (!subject) {
-      alert("Subject Missing");
-    } else if (!emailMessage) {
-      alert("Email Message Missing");
-    } else {
-      await axios
-        .post(process.env.REACT_APP_BACKEND_SENDEMAIL, {
-          email,
-          emailMessage: emailMessage + " Contact from Github Portfolio",
-          subject,
-        })
-        .then((r) => {
-          setSuccess(r.data.success);
-        })
-        .catch((r) => console.log(r.data.success));
-    }
+    // if (!email) {
+    //   alert("Email Missing");
+    // } else if (!subject) {
+    //   alert("Subject Missing");
+    // } else if (!emailMessage) {
+    //   alert("Email Message Missing");
+    // } else {
+    //   await axios
+    //     .post(process.env.REACT_APP_BACKEND_SENDEMAIL, {
+    //       email,
+    //       emailMessage: emailMessage + " Contact from Github Portfolio",
+    //       subject,
+    //     })
+    //     .then((r) => {
+    //       setSuccess(r.data.success);
+    //     })
+    //     .catch((r) => console.log(r.data.success));
+    // }
+    axios.post("https://portfolio-backend.adaptable.app/sendEmail",{
+      email:"rapperboy_63@hotmail.com",
+      subject:"testReact",
+      emailMessage:"mensaje de prueba React"
+    }).then(r=>{console.log(r.data); setSuccess(true)})
+    //axios.get("https://portfolio-backend.adaptable.app/").then(r=>console.log(r))
   }
   return (
     <>
