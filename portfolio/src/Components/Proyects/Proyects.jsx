@@ -36,9 +36,9 @@ export default function Proyects() {
                 }}
               >
                 <h2>{r.name}</h2>
-
+                <img className={Style.img_thumbnail} src={`https://raw.githubusercontent.com/${r.full_name}/main/thumbnail.png`} alt="Repo thumbnail"/>
                 <p>{r.description}</p>
-                <img src={`${r.html_url}/tree/main/thumbnail.png`} alt="Repo thumbnail"/>
+                
               </div>
             );
           })}

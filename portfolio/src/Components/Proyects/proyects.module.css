@@ -39,6 +39,11 @@
   text-decoration-color: rgb(0, 0, 0);
 }
 
+.img_thumbnail{
+  width: 100%;
+  max-height: 300px;
+}
+
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px) {
   .containerProyects {
