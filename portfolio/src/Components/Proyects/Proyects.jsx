@@ -38,7 +38,7 @@ export default function Proyects() {
                 <h2>{r.name}</h2>
 
                 <p>{r.description}</p>
-                <img src={`${r.html_url}/thumbnail.png`} alt="alt"/>
+                <img src={`${r.html_url}/tree/main/thumbnail.png`} alt="Repo thumbnail"/>
               </div>
             );
           })}
