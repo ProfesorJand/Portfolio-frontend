@@ -1,13 +1,15 @@
 .containerProyects {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   width: 80%;
   margin: 10px auto;
   padding: 20px 20px;
   background-color: #1e252f;
   border: 0.5rem solid black;
   border-radius: 2rem;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .container {
@@ -24,25 +26,46 @@
   word-break: break-word;
   transition: 350ms;
   color: white;
+  white-space: break-spaces;
 }
 
 .container:hover {
-  background-color: #61dafb;
-  border: 0.2rem solid white;
-  cursor: pointer;
+  /* background-color: #61dafb; */
+  /* border: 0.2rem solid white; */
+  /* cursor: pointer; */
 }
 
 .container:hover p,
 .container:hover h2,
 .container:hover a {
-  color: black;
-  text-decoration-color: rgb(0, 0, 0);
+  /* color: black;
+  text-decoration-color: rgb(0, 0, 0); */
 }
 
-.img_thumbnail{
+.img_thumbnail {
   width: 100%;
   max-height: 300px;
+  /* border-radius: 2rem; */
 }
+
+.InputGithub{
+  background-color: grey;
+  border-radius: 2rem;
+  color:white;
+  height: 2rem;
+}
+
+.InputGithub:hover{
+  cursor: pointer;
+  background-color: black;
+}
+
+.Info_Actions_Github {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+
 
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -75,7 +98,7 @@
   }
 }
 
-@media (min-width: 1025px) and (max-width:1385px) {
+@media (min-width: 1025px) and (max-width: 1385px) {
   .containerProyects {
     width: 50vw;
   }
