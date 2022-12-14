@@ -1,14 +1,21 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.e13fa886.css",
-    "main.js": "/Portfolio/static/js/main.63f7e496.js",
-    "static/media/Foto_cuadrada_Jorge.png": "/Portfolio/static/media/Foto_cuadrada_Jorge.221612ff207ce50252f8.png",
+    "main.css": "/Portfolio/static/css/main.0bb8aec0.chunk.css",
+    "main.js": "/Portfolio/static/js/main.4b8baa99.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.4b8baa99.chunk.js.map",
+    "runtime-main.js": "/Portfolio/static/js/runtime-main.a59d3227.js",
+    "runtime-main.js.map": "/Portfolio/static/js/runtime-main.a59d3227.js.map",
+    "static/js/2.55b75a61.chunk.js": "/Portfolio/static/js/2.55b75a61.chunk.js",
+    "static/js/2.55b75a61.chunk.js.map": "/Portfolio/static/js/2.55b75a61.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "main.e13fa886.css.map": "/Portfolio/static/css/main.e13fa886.css.map",
-    "main.63f7e496.js.map": "/Portfolio/static/js/main.63f7e496.js.map"
+    "static/css/main.0bb8aec0.chunk.css.map": "/Portfolio/static/css/main.0bb8aec0.chunk.css.map",
+    "static/js/2.55b75a61.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.55b75a61.chunk.js.LICENSE.txt",
+    "static/media/Foto_cuadrada_Jorge.221612ff.png": "/Portfolio/static/media/Foto_cuadrada_Jorge.221612ff.png"
   },
   "entrypoints": [
-    "static/css/main.e13fa886.css",
-    "static/js/main.63f7e496.js"
+    "static/js/runtime-main.a59d3227.js",
+    "static/js/2.55b75a61.chunk.js",
+    "static/css/main.0bb8aec0.chunk.css",
+    "static/js/main.4b8baa99.chunk.js"
   ]
 }
