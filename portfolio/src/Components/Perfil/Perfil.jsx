@@ -1,7 +1,8 @@
 import React from "react";
 import Style from "./perfil.module.css";
 import ImgJorge from "../../Images/Foto_cuadrada_Jorge.png";
-import SocialMedia from "../SocialMedia/SocialMedia";
+import SocialMedia from "../SocialMedia/SocialMedia.jsx";
+import Skills from "../Skills/Skills.jsx"
 
 export default function Perfil() {
   const name = "Jorge";
@@ -22,15 +23,17 @@ export default function Perfil() {
             como #1 en SEO. Me destaco por pensamiento creativo, resolución de
             problemas, trabajo en equipo, comunicación y autonomía.
           </p>
-          <SocialMedia/>
         </div>
         <div className={Style.containerRight}>
           <img
-            className={Style["image-cropped-transform"]}
+            //className={Style["image-cropped-transform"]}
+            className={Style.imgProfile}
             src={ImgJorge}
             alt="ProfesorJand Perfil Img"
           />
+          <SocialMedia/>
         </div>
+        
       </div>
     </>
   );

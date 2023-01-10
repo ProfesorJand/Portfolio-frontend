@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Portfolio-frontend/static/css/main.0bb8aec0.chunk.css",
-    "main.js": "/Portfolio-frontend/static/js/main.4b8baa99.chunk.js",
-    "main.js.map": "/Portfolio-frontend/static/js/main.4b8baa99.chunk.js.map",
+    "main.css": "/Portfolio-frontend/static/css/main.c7906246.chunk.css",
+    "main.js": "/Portfolio-frontend/static/js/main.6f836c38.chunk.js",
+    "main.js.map": "/Portfolio-frontend/static/js/main.6f836c38.chunk.js.map",
     "runtime-main.js": "/Portfolio-frontend/static/js/runtime-main.ce37dbe2.js",
     "runtime-main.js.map": "/Portfolio-frontend/static/js/runtime-main.ce37dbe2.js.map",
-    "static/js/2.55b75a61.chunk.js": "/Portfolio-frontend/static/js/2.55b75a61.chunk.js",
-    "static/js/2.55b75a61.chunk.js.map": "/Portfolio-frontend/static/js/2.55b75a61.chunk.js.map",
+    "static/js/2.73bfab5d.chunk.js": "/Portfolio-frontend/static/js/2.73bfab5d.chunk.js",
+    "static/js/2.73bfab5d.chunk.js.map": "/Portfolio-frontend/static/js/2.73bfab5d.chunk.js.map",
     "index.html": "/Portfolio-frontend/index.html",
-    "static/css/main.0bb8aec0.chunk.css.map": "/Portfolio-frontend/static/css/main.0bb8aec0.chunk.css.map",
-    "static/js/2.55b75a61.chunk.js.LICENSE.txt": "/Portfolio-frontend/static/js/2.55b75a61.chunk.js.LICENSE.txt",
+    "static/css/main.c7906246.chunk.css.map": "/Portfolio-frontend/static/css/main.c7906246.chunk.css.map",
+    "static/js/2.73bfab5d.chunk.js.LICENSE.txt": "/Portfolio-frontend/static/js/2.73bfab5d.chunk.js.LICENSE.txt",
     "static/media/Foto_cuadrada_Jorge.221612ff.png": "/Portfolio-frontend/static/media/Foto_cuadrada_Jorge.221612ff.png"
   },
   "entrypoints": [
     "static/js/runtime-main.ce37dbe2.js",
-    "static/js/2.55b75a61.chunk.js",
-    "static/css/main.0bb8aec0.chunk.css",
-    "static/js/main.4b8baa99.chunk.js"
+    "static/js/2.73bfab5d.chunk.js",
+    "static/css/main.c7906246.chunk.css",
+    "static/js/main.6f836c38.chunk.js"
   ]
 }

@@ -11,10 +11,17 @@ import { IconContext } from "react-icons";
 
 export default function Proyects() {
   const [repo, setRepo] = useState(null);
+  const [orgs, setOrgs] = useState([]);
+  const [members, setMembers] = useState({});
 
   useEffect(() => {
     repos();
+    organisations();
   }, []);
+
+  useEffect(() => {
+    console.log(members);
+  }, [members]);
 
   function repos() {
     axios
@@ -22,6 +29,30 @@ export default function Proyects() {
       .then((r) => r.data)
       .then((r) => setRepo(r));
     return;
+  }
+
+  function organisations() {
+    axios
+      .get(`https://api.github.com/orgs/PT07G05-Henry/repos`)
+      .then((r) => r.data)
+      .then((r) => {
+        r.forEach((e, i) =>
+          axios.get(e.assignees_url.replace("{/user}", "")).then((member) => {
+            // console.log(e.name);
+            // console.log(member.data);
+            // console.log(members)
+            let array = [];
+            // if(array.length>0 && array[i].hasOwnProperty(e.name)){
+            //   console.log("YESSSSSSSSSSSSSSSSSSSSSSS")
+            // }
+            array[i] = { [e.name]: member.data };
+
+            console.log(array);
+            setMembers((m) => ({...m,[e.name]: member.data}) );
+          })
+        );
+        setOrgs(r);
+      });
   }
 
   return (
@@ -79,6 +110,71 @@ export default function Proyects() {
                     window.open(r.html_url, "_blank");
                   }}
                 ></input>
+              </div>
+            );
+          })}
+        {/* </Carousel> */}
+      </div>
+      <div className="tituloH2" id="proyects">
+        <h2>Github - Organitations</h2>
+      </div>
+      <div className={Style.containerProyects}>
+        {/* <Carousel> */}
+        {orgs &&
+          orgs.map((r) => {
+            return (
+              <div
+                className={Style.container + ` mySlides` + ` w3-animate-fading`}
+                key={r.id}
+                // onClick={() => {
+                //   window.open(r.html_url, "_blank");
+                // }}
+              >
+                <h2>{r.name}</h2>
+                <img
+                  className={`${Style.img_thumbnail}`}
+                  src={`https://raw.githubusercontent.com/${r.full_name}/main/thumbnail.png`}
+                  alt="Repo thumbnail"
+                />
+                <p>{r.description}</p>
+                <div className={Style.Info_Actions_Github}>
+                  <div>
+                    <FaStar></FaStar> {r.stargazers_count}
+                  </div>
+                  <div>
+                    <FaEye></FaEye> {r.watchers_count}
+                  </div>
+                  <div>
+                    <BiGitRepoForked></BiGitRepoForked> {r.forks_count}
+                  </div>
+                  {/* <div>
+                    <FaClone
+                      onClick={() => {
+                        const fork = document.getElementById(`${r.name}`);
+                        fork.select();
+                        document.execCommand("copy");
+                        console.log("copiado")
+                      }}
+                    ></FaClone>
+                <input type="text" value={r.clone_url} id={r.name} ></input>
+                  </div> */}
+                </div>
+
+                <input
+                  className={Style.InputGithub}
+                  value="Go Repository"
+                  type="button"
+                  onClick={() => {
+                    window.open(r.html_url, "_blank");
+                  }}
+                ></input>
+                <div>
+                  {members && members[r.name] && members[r.name].map((m)=>{
+                    return (
+                      <a href={m.html_url} target="_blank"><img className={Style.img_member} src={m.avatar_url} alt={`member ${m.login}`} /></a>               
+                    )
+                  })}
+                </div>
               </div>
             );
           })}
