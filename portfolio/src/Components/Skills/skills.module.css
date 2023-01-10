@@ -21,7 +21,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-items: center;
+    justify-content: space-around;
+    overflow: auto;
 }
 
 .skill{
@@ -38,6 +39,16 @@
 
 .titulo{
     color:white;
+    text-align: center;
+}
+
+.containerH2Skills{
+    background-color: #141d24;
+    border-bottom: 3px solid #21303e;
+    border-right: 3px solid #21303e;
+    border-radius: 25px;
+    margin: 10px;
+    padding-bottom: 15px;
 }
 
 @media (min-width:1025px){

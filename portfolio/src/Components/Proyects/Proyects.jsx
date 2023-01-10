@@ -38,16 +38,8 @@ export default function Proyects() {
       .then((r) => {
         r.forEach((e, i) =>
           axios.get(e.assignees_url.replace("{/user}", "")).then((member) => {
-            // console.log(e.name);
-            // console.log(member.data);
-            // console.log(members)
             let array = [];
-            // if(array.length>0 && array[i].hasOwnProperty(e.name)){
-            //   console.log("YESSSSSSSSSSSSSSSSSSSSSSS")
-            // }
             array[i] = { [e.name]: member.data };
-
-            console.log(array);
             setMembers((m) => ({...m,[e.name]: member.data}) );
           })
         );
@@ -68,9 +60,6 @@ export default function Proyects() {
               <div
                 className={Style.container + ` mySlides` + ` w3-animate-fading`}
                 key={r.id}
-                // onClick={() => {
-                //   window.open(r.html_url, "_blank");
-                // }}
               >
                 <h2>{r.name}</h2>
                 <img

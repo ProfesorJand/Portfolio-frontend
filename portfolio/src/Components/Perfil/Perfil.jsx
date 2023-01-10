@@ -23,6 +23,7 @@ export default function Perfil() {
             como #1 en SEO. Me destaco por pensamiento creativo, resolución de
             problemas, trabajo en equipo, comunicación y autonomía.
           </p>
+          <SocialMedia/>
         </div>
         <div className={Style.containerRight}>
           <img
@@ -31,7 +32,7 @@ export default function Perfil() {
             src={ImgJorge}
             alt="ProfesorJand Perfil Img"
           />
-          <SocialMedia/>
+          
         </div>
         
       </div>

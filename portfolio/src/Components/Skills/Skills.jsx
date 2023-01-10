@@ -32,8 +32,16 @@ export default function Skills() {
 
     Backend: [
       {
-        skillName: "Github",
-        urlImage: "https://img.icons8.com/sf-black-filled/64/null/github.png",
+        skillName: "Rest API",
+        urlImage: "https://img.icons8.com/ultraviolet/40/null/api-settings.png",
+      },
+      {
+        skillName: "Auth0",
+        urlImage: "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/null/external-auth0-the-solution-you-need-for-web-mobile-iot-and-internal-applications-logo-shadow-tal-revivo.png",
+      },
+      {
+        skillName: "Sequelize",
+        urlImage: "https://hyunseob.github.io/images/sequelizejs.png",
       },
       {
         skillName: "MongoDB",
@@ -51,12 +59,28 @@ export default function Skills() {
         skillName: "MySQL",
         urlImage: "https://img.icons8.com/color/48/null/mysql-logo.png",
       },
+    ],
+    Others: [
+      {
+        skillName: "SCRUM",
+        urlImage: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/null/external-scrum-agile-flaticons-flat-flat-icons-2.png",
+      },
+      {
+        skillName: "Git",
+        urlImage: "https://img.icons8.com/color/48/null/git.png",
+      },
+      {
+        skillName: "Github",
+        urlImage: "https://img.icons8.com/sf-black-filled/64/null/github.png",
+      },
       {
         skillName: "Wordpress",
         urlImage: "https://img.icons8.com/nolan/64/wordpress.png",
       },
-    ],
-    Soft: [
+      {
+        skillName: "Figma",
+        urlImage: "https://img.icons8.com/color/48/null/figma--v1.png",
+      },
       {
         skillName: "Photoshop",
         urlImage:
@@ -74,13 +98,13 @@ export default function Skills() {
   };
   return (
     <>
-        <div className="tituloH2" id="contact">
+        <div className="tituloH2" id="skills">
         <h2>Skills</h2>
         </div>
       <div className={Style.container}>
         {Object.keys(skills).map((skill) => {
           return (
-            <>
+            <div className={Style.containerH2Skills}>
               <h2 className={Style.titulo}>{skill}</h2>
               <div className={Style.containerSkills}>
                 {skills[skill].map((s) => {
@@ -96,7 +120,7 @@ export default function Skills() {
                   );
                 })}
               </div>
-            </>
+            </div>
           );
         })}
       </div>
