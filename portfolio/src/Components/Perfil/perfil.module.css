@@ -6,8 +6,18 @@
   padding: 20px 20px;
   width: 80%;
   background-color: #1e252f;
-  border: 0.5rem solid black;
-  border-radius: 2rem;
+  /* border: 0.5rem solid black; */
+  border-radius: 2rem; 
+  
+  animation: gradientDarkGray 7s ease infinite;
+}
+
+
+@keyframes gradientDarkGray {
+    0%   {background-color: #141d24; box-shadow: 0px 0px 12px 8px #888888;}
+    50%  {background-color: #3a3f44; box-shadow: 0px 0px 12px 8px aqua;}
+    100%   {background-color: #141d24; box-shadow: 0px 0px 12px 8px #888888;}
+
 }
 
 .containerLeft {
@@ -45,6 +55,10 @@
 .imgProfile{
   width: 100%;
   border-radius: 25px;
+}
+
+.spanText{
+  color:aqua
 }
 
 /* Media Query for low resolution Mobil, Tablets, Ipads */

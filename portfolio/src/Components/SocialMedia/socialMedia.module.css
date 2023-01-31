@@ -8,11 +8,13 @@
 .react-icons{
     width: 3rem;
     height: 3rem;
+    transition: 1s;
 }
 
 .react-icons:hover{
     fill: aqua;
     cursor: pointer;
+    transform: scale(1.2);
 }
 
 .react-icons-github{

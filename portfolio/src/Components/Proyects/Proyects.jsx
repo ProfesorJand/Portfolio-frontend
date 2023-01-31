@@ -157,7 +157,7 @@ export default function Proyects() {
                     window.open(r.html_url, "_blank");
                   }}
                 ></input>
-                <div>
+                <div className={Style.Members}>
                   {members && members[r.name] && members[r.name].map((m)=>{
                     return (
                       <a href={m.html_url} target="_blank"><img className={Style.img_member} src={m.avatar_url} alt={`member ${m.login}`} /></a>               

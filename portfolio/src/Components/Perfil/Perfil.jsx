@@ -16,11 +16,11 @@ export default function Perfil() {
         <div className={Style.containerLeft}>
           <h3 className="tituloH2">{name + ' ' + lastName}</h3>
           <p>
-            Full Stack Developer con formación como Ingeniero Industrial.
-            Experiencias trabajando en NodeJS, React, Redux, SQL entre otras
+            <span className={Style.spanText}>Full Stack Developer</span> con formación como <span className={Style.spanText}>Ingeniero Industrial</span>.
+            Experiencias trabajando en <span className={Style.spanText}>NodeJS</span>, <span className={Style.spanText}>React</span>, <span className={Style.spanText}>Redux</span>, <span className={Style.spanText}>SQL</span> entre otras
             tecnologías del sector. Creador pagina web{" "}
-            <a href="https://guiadeparche.com">guiadeparche.com</a> posicionada
-            como #1 en SEO. Me destaco por pensamiento creativo, resolución de
+            <a className={Style.spanText} href="https://guiadeparche.com">guiadeparche.com</a> posicionada
+            como <span className={Style.spanText}>#1</span> en <span className={Style.spanText}>SEO</span>. Me destaco por pensamiento creativo, resolución de
             problemas, trabajo en equipo, comunicación y autonomía.
           </p>
           <SocialMedia/>

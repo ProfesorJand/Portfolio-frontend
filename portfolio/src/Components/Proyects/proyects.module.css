@@ -52,16 +52,23 @@
   /* border-radius: 2rem; */
 }
 
+.Members{
+  margin-top: 5px;
+}
+
 .InputGithub{
   background-color: grey;
   border-radius: 2rem;
   color:white;
   height: 2rem;
+  transition: 0.5s;
 }
 
 .InputGithub:hover{
   cursor: pointer;
-  background-color: black;
+  background-color: #61dafb;
+  color:black;
+  font-weight: bold;
 }
 
 .Info_Actions_Github {

@@ -3,6 +3,7 @@
     height: 48px;
 }
 
+
 .container{
     display: flex;
     flex-direction: column;
@@ -22,7 +23,6 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    overflow: auto;
 }
 
 .skill{
@@ -31,10 +31,15 @@
     margin: 5px;
     justify-content: center;
     align-items: center;
+    transition: 1s;
 }
 
 .skill p{
     margin: 0px;
+}
+
+.skill:hover{
+    transform: scale(1.2);  
 }
 
 .titulo{
@@ -49,6 +54,15 @@
     border-radius: 25px;
     margin: 10px;
     padding-bottom: 15px;
+    animation: gradientDarkGray 7s ease infinite;
+}
+
+
+@keyframes gradientDarkGray {
+    0%   {background-color: #141d24}
+    50%  {background-color: #3a3f44;}
+    100%   {background-color: #141d24}
+
 }
 
 @media (min-width:1025px){

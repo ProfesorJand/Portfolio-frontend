@@ -59,6 +59,14 @@ export default function Skills() {
         skillName: "MySQL",
         urlImage: "https://img.icons8.com/color/48/null/mysql-logo.png",
       },
+      {
+        skillName: "Python",
+        urlImage: "https://img.icons8.com/color/48/null/python--v1.png",
+      },
+      {
+        skillName: "PHP",
+        urlImage: "https://img.icons8.com/officel/40/null/php-logo.png",
+      },
     ],
     Others: [
       {
@@ -82,6 +90,10 @@ export default function Skills() {
         urlImage: "https://img.icons8.com/color/48/null/figma--v1.png",
       },
       {
+        skillName: "Trello",
+        urlImage: "https://img.icons8.com/color/48/null/trello.png",
+      },
+      {
         skillName: "Photoshop",
         urlImage:
           "https://img.icons8.com/color/48/null/adobe-photoshop--v1.png",
@@ -94,6 +106,7 @@ export default function Skills() {
         skillName: "OBS",
         urlImage: "https://img.icons8.com/ios-filled/50/null/obs-studio.png",
       },
+      
     ],
   };
   return (

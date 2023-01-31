@@ -16,6 +16,14 @@ p{
   margin: 3rem auto 1rem auto;
   font-size: 2rem;
   color: #61dafb;
+  /* text-shadow: 0 0 5px white; */
+  animation: tituloGlowing 2s infinite;
+}
+
+@keyframes tituloGlowing {
+  0%{text-shadow: 0 0 10px aqua;}
+  50%{text-shadow: 0 0 20px white;}
+  100%{text-shadow: 0 0 10px aqua;}
 }
 
 .containerApp{
