@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import Style from "./proyects.module.css";
-import axios from "axios";
-import { FaEye, FaStar, FaClone } from "react-icons/fa";
-import { BiGitRepoForked } from "react-icons/bi";
-
-import { IconContext } from "react-icons";
+import React, { useEffect, useState } from 'react';
+import Style from './proyects.module.css';
+import axios from 'axios';
+import { FaEye, FaStar, FaClone } from 'react-icons/fa';
+import { BiGitRepoForked } from 'react-icons/bi';
+import fs from 'fs';
+import { IconContext } from 'react-icons';
 //
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
 // import {Carousel} from "react-responsive-carousel";
@@ -24,10 +24,19 @@ export default function Proyects() {
   }, [members]);
 
   function repos() {
-    axios
-      .get("https://api.github.com/users/ProfesorJand/repos")
-      .then((r) => r.data)
-      .then((r) => setRepo(r));
+    const repositorios = fetch(
+      'https://api.github.com/users/ProfesorJand/repos'
+    ).then((r) => r.json());
+    console.log(repositorios);
+    setRepo(repositorios);
+    try {
+      fs.writeFileSync(
+        'src/json/repos.json',
+        JSON.stringify(repositorios, null, 2)
+      );
+    } catch (err) {
+      console.log(err);
+    }
     return;
   }
 
@@ -37,13 +46,28 @@ export default function Proyects() {
       .then((r) => r.data)
       .then((r) => {
         r.forEach((e, i) =>
-          axios.get(e.assignees_url.replace("{/user}", "")).then((member) => {
+          axios.get(e.assignees_url.replace('{/user}', '')).then((member) => {
             let array = [];
             array[i] = { [e.name]: member.data };
-            setMembers((m) => ({...m,[e.name]: member.data}) );
+            setMembers((m) => ({ ...m, [e.name]: member.data }));
           })
         );
-        setOrgs(r);
+        console.log(r);
+        setOrgs((old) => [...old, r]);
+      });
+
+    axios
+      .get('https://api.github.com/orgs/Eagle-Solutions-App/repos')
+      .then((r) => r.data)
+      .then((r) => {
+        r.forEach((e, i) =>
+          axios.get(e.assignees_url.replace('{/user}', '')).then((member) => {
+            let array = [];
+            array[i] = { [e.name]: member.data };
+            setMembers((m) => ({ ...m, [e.name]: member.data }));
+          })
+        );
+        setOrgs((old) => [...old, r]);
       });
   }
 
@@ -96,7 +120,7 @@ export default function Proyects() {
                   value="Go Repository"
                   type="button"
                   onClick={() => {
-                    window.open(r.html_url, "_blank");
+                    window.open(r.html_url, '_blank');
                   }}
                 ></input>
               </div>
@@ -154,15 +178,23 @@ export default function Proyects() {
                   value="Go Repository"
                   type="button"
                   onClick={() => {
-                    window.open(r.html_url, "_blank");
+                    window.open(r.html_url, '_blank');
                   }}
                 ></input>
                 <div className={Style.Members}>
-                  {members && members[r.name] && members[r.name].map((m)=>{
-                    return (
-                      <a href={m.html_url} target="_blank"><img className={Style.img_member} src={m.avatar_url} alt={`member ${m.login}`} /></a>               
-                    )
-                  })}
+                  {members &&
+                    members[r.name] &&
+                    members[r.name].map((m) => {
+                      return (
+                        <a href={m.html_url} target="_blank">
+                          <img
+                            className={Style.img_member}
+                            src={m.avatar_url}
+                            alt={`member ${m.login}`}
+                          />
+                        </a>
+                      );
+                    })}
                 </div>
               </div>
             );
